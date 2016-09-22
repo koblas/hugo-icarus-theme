@@ -34,11 +34,21 @@
     {{ partial "head_custom" . }}
 
     <style>
-        .full-width {
+        @media screen and (min-width: 1200px) {
+          #main.full-width {
             width: 100% !important;
-        }
-        .half-width {
+          }
+          #main.half-width {
             width: 75% !important;
+          }
+        }
+        @media screen and (min-width: 800px) and (max-width: 1199px) {
+          #main.full-width {
+            width: 100% !important;
+          }
+          #main.half-width {
+            width: 65% !important;
+          }
         }
     </style>
 
