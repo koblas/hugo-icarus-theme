@@ -33,13 +33,14 @@
     {{ template "_internal/twitter_cards.html" . }}
     {{ partial "head_custom" . }}
 
-    {{ if .Params.disable_profile | and .Params.disable_widgets }}
     <style>
         .full-width {
             width: 100% !important;
         }
+        .half-width {
+            width: 75% !important;
+        }
     </style>
-    {{ end }}
 
     <!-- needs to be loaded first for following scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
