@@ -1,5 +1,7 @@
-{{ if .Params.disable_profile | and .Params.disable_widgets }}
+{{ if (.Params.disable_profile | or .Site.Params.disable_profile) | and (.Params.disable_widgets | or .Site.Params.disable_widgets) }}
 <section id="main" class="full-width">
+{{ else if .Site.Params.disable_profile | or .Site.Params.disable_widgets | or .Params.disable_widgets | or .Params.disable_profile }}
+<section id="main" class="half-width">
 {{ else }}
 <section id="main">
 {{ end }}
